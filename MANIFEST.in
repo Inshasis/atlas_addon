@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include atlas_addon *.css
+recursive-include atlas_addon *.csv
+recursive-include atlas_addon *.html
+recursive-include atlas_addon *.ico
+recursive-include atlas_addon *.js
+recursive-include atlas_addon *.json
+recursive-include atlas_addon *.md
+recursive-include atlas_addon *.png
+recursive-include atlas_addon *.py
+recursive-include atlas_addon *.svg
+recursive-include atlas_addon *.txt
+recursive-exclude atlas_addon *.pyc
