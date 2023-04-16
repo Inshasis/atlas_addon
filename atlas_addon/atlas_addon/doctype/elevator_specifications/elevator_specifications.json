@@ -1,0 +1,38 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-04-14 22:20:23.069890",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "specifications_type",
+  "specifications_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "specifications_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Specifications Type"
+  },
+  {
+   "fieldname": "specifications_details",
+   "fieldtype": "Long Text",
+   "in_list_view": 1,
+   "label": "Specifications Details"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-04-14 22:22:02.194520",
+ "modified_by": "Administrator",
+ "module": "Atlas Addon",
+ "name": "Elevator Specifications",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
