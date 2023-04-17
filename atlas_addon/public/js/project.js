@@ -29,3 +29,8 @@ function refresh_location(frm){
     cur_frm.refresh_field('area');
     cur_frm.refresh_field('sub_area');
 }
+
+
+frappe.ui.form.on("Project", "open_with_google_map", function(frm) {
+    var myWin = window.open(cur_frm.doc.google_map_link);
+});
