@@ -56,6 +56,68 @@ function refresh_location(frm){
 }
 
 
+// Auto Fetch Full Address
+frappe.ui.form.on("Lead", {
+    //Province
+    province(frm) {
+    cur_frm.set_value("full_address",
+    cur_frm.doc.province+', '
+    +cur_frm.doc.citys+', '
+    +cur_frm.doc.areas+', '
+    +cur_frm.doc.sub_area+', '
+    +cur_frm.doc.plate_no
+    );
+    cur_frm.refresh_field('full_address');
+    },
+    
+    //City 
+    citys(frm) {
+    cur_frm.set_value("full_address",
+    cur_frm.doc.province+', '
+    +cur_frm.doc.citys+', '
+    +cur_frm.doc.areas+', '
+    +cur_frm.doc.sub_area+', '
+    +cur_frm.doc.plate_no
+    );
+    cur_frm.refresh_field('full_address');
+    },
+    //Area
+    areas(frm) {
+    cur_frm.set_value("full_address",
+    cur_frm.doc.province+', '
+    +cur_frm.doc.citys+', '
+    +cur_frm.doc.areas+', '
+    +cur_frm.doc.sub_area+', '
+    +cur_frm.doc.plate_no
+    );
+    cur_frm.refresh_field('full_address');
+    },
+    //Sub Area
+    sub_area(frm) {
+    cur_frm.set_value("full_address",
+    cur_frm.doc.province+', '
+    +cur_frm.doc.citys+', '
+    +cur_frm.doc.areas+', '
+    +cur_frm.doc.sub_area+', '
+    +cur_frm.doc.plate_no
+    );
+    cur_frm.refresh_field('full_address');
+    },
+    //Plate No
+    plate_no(frm) {
+    cur_frm.set_value("full_address",
+    cur_frm.doc.province+', '
+    +cur_frm.doc.citys+', '
+    +cur_frm.doc.areas+', '
+    +cur_frm.doc.sub_area+', '
+    +cur_frm.doc.plate_no
+    );
+    cur_frm.refresh_field('full_address');
+    }
+    
+});
+
+
 frappe.ui.form.on("Lead", "open_with_google_map", function(frm) {
     var myWin = window.open(cur_frm.doc.google_map_link);
 });
