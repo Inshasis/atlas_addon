@@ -3,26 +3,26 @@
 
 frappe.ui.form.on('Lead', {
 	onload_post_render: function(frm) {
-	    frm.set_df_property('naming_series', "hidden", 1);
-	    frm.set_df_property('middle_name', "hidden", 1);
-	    frm.set_df_property('last_name', "hidden", 1);
+	    // frm.set_df_property('naming_series', "hidden", 1);
+	    // frm.set_df_property('middle_name', "hidden", 1);
+	    // frm.set_df_property('last_name', "hidden", 1);
 	    
 	    //Hidden Contact Info
-        frm.set_df_property('email_id', "hidden", 1);
-        frm.set_df_property('website', "hidden", 1);
-        frm.set_df_property('mobile_no', "hidden", 1);
-        frm.set_df_property('whatsapp_no', "hidden", 1);
-        frm.set_df_property('phone', "hidden", 1);
-        frm.set_df_property('phone_ext', "hidden", 1);
+        // frm.set_df_property('email_id', "hidden", 1);
+        // frm.set_df_property('website', "hidden", 1);
+        // frm.set_df_property('mobile_no', "hidden", 1);
+        // frm.set_df_property('whatsapp_no', "hidden", 1);
+        // frm.set_df_property('phone', "hidden", 1);
+        // frm.set_df_property('phone_ext', "hidden", 1);
         
         //Hidden Organization Info
-        frm.set_df_property('company_name', "hidden", 1);
-        frm.set_df_property('no_of_employees', "hidden", 1);
-        frm.set_df_property('annual_revenue', "hidden", 1);
-        frm.set_df_property('industry', "hidden", 1);
-        frm.set_df_property('market_segment', "hidden", 1);
-        frm.set_df_property('territory', "hidden", 1);
-        frm.set_df_property('fax', "hidden", 1);
+        // frm.set_df_property('company_name', "hidden", 1);
+        // frm.set_df_property('no_of_employees', "hidden", 1);
+        // frm.set_df_property('annual_revenue', "hidden", 1);
+        // frm.set_df_property('industry', "hidden", 1);
+        // frm.set_df_property('market_segment', "hidden", 1);
+        // frm.set_df_property('territory', "hidden", 1);
+        // frm.set_df_property('fax', "hidden", 1);
     }
 });
 
@@ -58,5 +58,25 @@ function refresh_location(frm){
 
 frappe.ui.form.on("Lead", "open_with_google_map", function(frm) {
     var myWin = window.open(cur_frm.doc.google_map_link);
+});
+
+
+frappe.ui.form.on('Lead', {
+	onload(frm) {
+    	if(cur_frm.doc.google_map_link){
+    	    frm.set_df_property('open_with_google_map', "hidden", 0);
+    	}
+    	else{
+    	    frm.set_df_property('open_with_google_map', "hidden", 1);
+    	}
+    },
+    google_map_link(frm) {
+	    if(cur_frm.doc.google_map_link){
+    	    frm.set_df_property('open_with_google_map', "hidden", 0);
+    	}
+    	else{
+    	    frm.set_df_property('open_with_google_map', "hidden", 1);
+    	}
+	}
 });
 
