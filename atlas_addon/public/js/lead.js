@@ -3,6 +3,11 @@
 
 frappe.ui.form.on('Lead', {
 	onload_post_render: function(frm) {
+        frm.set_df_property('city', "hidden", 1);
+	    frm.set_df_property('state', "hidden", 1);
+	    frm.set_df_property('country', "hidden", 1);
+	    frm.set_df_property('contact_html', "hidden", 1);
+	    frm.set_df_property('address_html', "hidden", 1);
 	    // frm.set_df_property('naming_series', "hidden", 1);
 	    // frm.set_df_property('middle_name', "hidden", 1);
 	    // frm.set_df_property('last_name', "hidden", 1);
