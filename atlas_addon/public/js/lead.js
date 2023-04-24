@@ -63,7 +63,7 @@ function refresh_location(frm){
 frappe.ui.form.on("Lead", {
     //Plate No
     plate_no(frm) {
-    if(cur_frm.doc.province && cur_frm.doc.citys && cur_frm.doc.areas && cur_frm.doc.sub_area){
+    if(cur_frm.doc.province && cur_frm.doc.citys && cur_frm.doc.areas){
         cur_frm.set_value("full_address",
         cur_frm.doc.province+', '
         +cur_frm.doc.citys+', '
