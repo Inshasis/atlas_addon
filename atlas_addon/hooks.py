@@ -108,13 +108,14 @@ doctype_js = {
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-#	"*": {
-#		"on_update": "method",
-#		"on_cancel": "method",
-#		"on_trash": "method"
-#	}
-# }
+doc_events = {
+	"Lead": {
+		"after_insert": "atlas_addon.atlas_addon.doctype.lead.lead.after_insert",
+	},
+    "Customer": {
+		"after_insert": "atlas_addon.atlas_addon.doctype.customer.customer.after_insert",
+	}
+}
 
 # Scheduled Tasks
 # ---------------
