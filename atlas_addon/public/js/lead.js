@@ -3,11 +3,7 @@
 
 frappe.ui.form.on('Lead', {
 	onload_post_render: function(frm) {
-        frm.set_df_property('city', "hidden", 1);
-	    frm.set_df_property('state', "hidden", 1);
-	    frm.set_df_property('country', "hidden", 1);
-	    frm.set_df_property('contact_html', "hidden", 1);
-	    frm.set_df_property('address_html', "hidden", 1);
+        
 	    // frm.set_df_property('naming_series', "hidden", 1);
 	    // frm.set_df_property('middle_name', "hidden", 1);
 	    // frm.set_df_property('last_name', "hidden", 1);
@@ -60,8 +56,8 @@ function refresh_location(frm){
     cur_frm.refresh_field('sub_area');
 }
 
+
 frappe.ui.form.on("Lead", {
-    //Plate No
     plate_no(frm) {
     if(cur_frm.doc.province && cur_frm.doc.citys && cur_frm.doc.areas){
         cur_frm.set_value("full_address",
@@ -76,66 +72,7 @@ frappe.ui.form.on("Lead", {
     }
     
 });
-// // Auto Fetch Full Address
-// frappe.ui.form.on("Lead", {
-//     //Province
-//     province(frm) {
-//     cur_frm.set_value("full_address",
-//     cur_frm.doc.province+', '
-//     +cur_frm.doc.citys+', '
-//     +cur_frm.doc.areas+', '
-//     +cur_frm.doc.sub_area+', '
-//     +cur_frm.doc.plate_no
-//     );
-//     cur_frm.refresh_field('full_address');
-//     },
-    
-//     //City 
-//     citys(frm) {
-//     cur_frm.set_value("full_address",
-//     cur_frm.doc.province+', '
-//     +cur_frm.doc.citys+', '
-//     +cur_frm.doc.areas+', '
-//     +cur_frm.doc.sub_area+', '
-//     +cur_frm.doc.plate_no
-//     );
-//     cur_frm.refresh_field('full_address');
-//     },
-//     //Area
-//     areas(frm) {
-//     cur_frm.set_value("full_address",
-//     cur_frm.doc.province+', '
-//     +cur_frm.doc.citys+', '
-//     +cur_frm.doc.areas+', '
-//     +cur_frm.doc.sub_area+', '
-//     +cur_frm.doc.plate_no
-//     );
-//     cur_frm.refresh_field('full_address');
-//     },
-//     //Sub Area
-//     sub_area(frm) {
-//     cur_frm.set_value("full_address",
-//     cur_frm.doc.province+', '
-//     +cur_frm.doc.citys+', '
-//     +cur_frm.doc.areas+', '
-//     +cur_frm.doc.sub_area+', '
-//     +cur_frm.doc.plate_no
-//     );
-//     cur_frm.refresh_field('full_address');
-//     },
-//     //Plate No
-//     plate_no(frm) {
-//     cur_frm.set_value("full_address",
-//     cur_frm.doc.province+', '
-//     +cur_frm.doc.citys+', '
-//     +cur_frm.doc.areas+', '
-//     +cur_frm.doc.sub_area+', '
-//     +cur_frm.doc.plate_no
-//     );
-//     cur_frm.refresh_field('full_address');
-//     }
-    
-// });
+
 
 
 frappe.ui.form.on("Lead", "open_with_google_map", function(frm) {
