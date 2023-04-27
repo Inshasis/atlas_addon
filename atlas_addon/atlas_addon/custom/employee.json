@@ -1039,7 +1039,7 @@
    "_comments": null,
    "_liked_by": null,
    "_user_tags": null,
-   "creation": "2023-04-17 18:21:00.869688",
+   "creation": "2023-04-27 12:55:13.831154",
    "default_value": null,
    "doc_type": "Employee",
    "docstatus": 0,
@@ -1047,7 +1047,7 @@
    "field_name": "naming_series",
    "idx": 0,
    "is_system_generated": 0,
-   "modified": "2023-04-17 18:21:00.869688",
+   "modified": "2023-04-27 12:55:13.831154",
    "modified_by": "Administrator",
    "module": null,
    "name": "Employee-naming_series-default",
@@ -1055,14 +1055,14 @@
    "property": "default",
    "property_type": "Text",
    "row_name": null,
-   "value": "{company_abbr}.-.{####}"
+   "value": "{company_abbr}.-.{###}"
   },
   {
    "_assign": null,
    "_comments": null,
    "_liked_by": null,
    "_user_tags": null,
-   "creation": "2023-04-17 18:21:00.637264",
+   "creation": "2023-04-27 12:55:13.514205",
    "default_value": null,
    "doc_type": "Employee",
    "docstatus": 0,
@@ -1070,7 +1070,7 @@
    "field_name": "naming_series",
    "idx": 0,
    "is_system_generated": 0,
-   "modified": "2023-04-17 18:21:00.637264",
+   "modified": "2023-04-27 12:55:13.514205",
    "modified_by": "Administrator",
    "module": null,
    "name": "Employee-naming_series-options",
@@ -1078,7 +1078,7 @@
    "property": "options",
    "property_type": "Text",
    "row_name": null,
-   "value": "{company_abbr}.-.{####}"
+   "value": "{company_abbr}.-.{###}"
   },
   {
    "_assign": null,
