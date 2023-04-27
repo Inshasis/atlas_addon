@@ -115,6 +115,9 @@ doc_events = {
 	},
     "Customer": {
 		"after_insert": "atlas_addon.atlas_addon.doctype.customer.customer.after_insert",
+	},
+    "Payment Entry": {
+		"on_submit": "atlas_addon.atlas_addon.doctype.payment_entry.payment_entry.on_submit",
 	}
 }
 
