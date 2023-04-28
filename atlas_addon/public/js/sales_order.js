@@ -41,3 +41,16 @@ frappe.ui.form.on('Sales Order', {
             });
     }
 });
+
+//Bank Account Filter
+frappe.ui.form.on('Sales Order', {
+    party_type: function (frm) {
+        cur_frm.set_query("party", function (doc) {
+            return {
+                filters: [
+                    ['Bank Account', 'party_type', 'in', cur_frm.doc.party_type]
+                ]
+            };
+        });
+    }
+});
