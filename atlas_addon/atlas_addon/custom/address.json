@@ -344,7 +344,7 @@
    "name": "Address-province",
    "no_copy": 0,
    "non_negative": 0,
-   "options": "Province",
+   "options": "Governorate",
    "owner": "Administrator",
    "permlevel": 0,
    "precision": "",
