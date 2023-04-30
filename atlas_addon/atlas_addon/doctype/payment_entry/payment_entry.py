@@ -40,3 +40,7 @@ def update_payment_term(doc):
 		frappe.db.sql("""UPDATE `tabPayment Schedule` ps SET ps.mode_of_payment='%s',ps.cheque_no = '%s' WHERE ps.parent='%s' AND ps.payment_term='%s'"""%(doc.mode_of_payment,reference_no,si,pay_term), as_list=1)
 		frappe.db.commit()
 
+@frappe.whitelist() 
+def si_payment_terms_fetch(sales_invoice):
+	si_pay_terms = frappe.db.sql(f""" select payment_term,description,due_date,invoice_portion,payment_amount from `tabPayment Schedule` where parenttype='Sales Invoice' AND parent='{sales_invoice}' Order By idx ASC;""",as_dict=1)
+	return si_pay_terms
