@@ -120,6 +120,9 @@ doc_events = {
     "Payment Entry": {
 		"on_submit": "atlas_addon.atlas_addon.doctype.payment_entry.payment_entry.on_submit",
 	}
+  #   "Sales Order": {
+	# 	"validate": "atlas_addon.atlas_addon.doctype.sales_order.sales_order.validate",
+	# }
 }
 
 # Scheduled Tasks
