@@ -15,7 +15,7 @@ frappe.ui.form.on('Payment Entry', {
 
 frappe.ui.form.on('Payment Entry', {
   setup: function(frm, cdt, cdn){
-  // frm.set_df_property('sales_invoice', "hidden", 1);
+  frm.set_df_property('sales_invoice', "hidden", 1);
   var d = cur_frm.doc.references;
   if(d[0].reference_doctype == "Sales Invoice"){
       console.log(d[0].reference_name);    
