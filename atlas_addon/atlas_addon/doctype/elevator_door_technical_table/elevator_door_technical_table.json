@@ -1,0 +1,74 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-04-28 21:31:39.780994",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section",
+  "type",
+  "panel",
+  "opening",
+  "width",
+  "height",
+  "qty"
+ ],
+ "fields": [
+  {
+   "fieldname": "section",
+   "fieldtype": "Select",
+   "label": "Section",
+   "options": "\nS\nA\nB"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "\nCar-Door\nLanding-Door"
+  },
+  {
+   "fieldname": "panel",
+   "fieldtype": "Select",
+   "label": "Panel",
+   "options": "\n2-Panel\n3-Panel\n4-Panel\nManual"
+  },
+  {
+   "fieldname": "opening",
+   "fieldtype": "Select",
+   "label": "Opening",
+   "options": "\nCentral-Opening\nRight-Opening\nLeft-Opening"
+  },
+  {
+   "fieldname": "width",
+   "fieldtype": "Select",
+   "label": "Width",
+   "options": "\n1100\n1200\n1000\n600\n900\n800\n750\n700"
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Select",
+   "label": "Height",
+   "options": "\n2100\n2000"
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Select",
+   "label": "QTY",
+   "options": "\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-04-28 21:31:39.780994",
+ "modified_by": "Administrator",
+ "module": "Atlas Addon",
+ "name": "Elevator Door Technical Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

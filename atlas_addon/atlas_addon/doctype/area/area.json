@@ -21,7 +21,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Parent Province",
-   "options": "Province",
+   "options": "Governorate",
    "reqd": 1
   },
   {
@@ -60,7 +60,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-04-11 13:18:48.670827",
+ "modified": "2023-04-23 16:30:02.895021",
  "modified_by": "Administrator",
  "module": "Atlas Addon",
  "name": "Area",
