@@ -10,10 +10,9 @@
  "field_order": [
   "parent_province",
   "parent_city",
+  "column_break_acrjn",
   "area_name",
-  "area_code",
-  "abbr",
-  "geo_location"
+  "area_code"
  ],
  "fields": [
   {
@@ -21,7 +20,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Parent Province",
-   "options": "Governorate",
+   "options": "Province",
    "reqd": 1
   },
   {
@@ -44,23 +43,16 @@
    "fieldname": "area_code",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Area Code",
-   "reqd": 1
+   "label": "Area Code"
   },
   {
-   "fieldname": "abbr",
-   "fieldtype": "Data",
-   "label": "Abbr."
-  },
-  {
-   "fieldname": "geo_location",
-   "fieldtype": "Geolocation",
-   "label": "Geo Location"
+   "fieldname": "column_break_acrjn",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-04-23 16:30:02.895021",
+ "modified": "2023-11-12 19:00:06.268533",
  "modified_by": "Administrator",
  "module": "Atlas Addon",
  "name": "Area",
@@ -92,8 +84,10 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
+ "title_field": "area_name",
  "track_changes": 1
 }

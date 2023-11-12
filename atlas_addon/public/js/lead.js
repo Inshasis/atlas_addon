@@ -42,32 +42,87 @@ frappe.ui.form.on("Lead", "citys", function(frm) {
 cur_frm.fields_dict['areas'].get_query = function(doc) {	return {filters: {"parent_city": cur_frm.doc.citys?cur_frm.doc.citys:"N/A"}}}
     cur_frm.refresh_field('areas');
 });
-frappe.ui.form.on("Lead", "areas", function(frm) {
-cur_frm.fields_dict['sub_area'].get_query = function(doc) {	return {filters: {"parent_area": cur_frm.doc.areas?cur_frm.doc.areas:"N/A"}}}
-    cur_frm.refresh_field('sub_area');
-});
+// frappe.ui.form.on("Lead", "areas", function(frm) {
+// cur_frm.fields_dict['sub_area'].get_query = function(doc) {	return {filters: {"parent_area": cur_frm.doc.areas?cur_frm.doc.areas:"N/A"}}}
+//     cur_frm.refresh_field('sub_area');
+// });
 
 function refresh_location(frm){
     cur_frm.fields_dict['citys'].get_query = function(doc) {	return {filters: {"province": cur_frm.doc.province?cur_frm.doc.province:"N/A"}}}
     cur_frm.fields_dict['areas'].get_query = function(doc) {	return {filters: {"parent_city": cur_frm.doc.citys?cur_frm.doc.citys:"N/A"}}}
-    cur_frm.fields_dict['sub_area'].get_query = function(doc) {	return {filters: {"parent_area": cur_frm.doc.areas?cur_frm.doc.areas:"N/A"}}}
+    // cur_frm.fields_dict['sub_area'].get_query = function(doc) {	return {filters: {"parent_area": cur_frm.doc.areas?cur_frm.doc.areas:"N/A"}}}
     cur_frm.refresh_field('citys');
     cur_frm.refresh_field('areas');
-    cur_frm.refresh_field('sub_area');
+    cur_frm.refresh_field('custom_address_line');
 }
 
 
 frappe.ui.form.on("Lead", {
-    plate_no(frm) {
-    if(cur_frm.doc.province && cur_frm.doc.citys && cur_frm.doc.areas){
-        cur_frm.set_value("full_address",
-        cur_frm.doc.province+', '
-        +cur_frm.doc.citys+', '
-        +cur_frm.doc.areas+', '
-        +cur_frm.doc.sub_area+', '
-        +cur_frm.doc.plate_no
-        );
-        cur_frm.refresh_field('full_address');
+    validate(frm) {
+        if(cur_frm.doc.province && cur_frm.doc.citys && cur_frm.doc.areas && cur_frm.doc.custom_address_line){
+            cur_frm.set_value("full_address",
+            cur_frm.doc.custom_address_line+', '
+            +cur_frm.doc.areas+', '
+            +cur_frm.doc.citys+', '
+            +cur_frm.doc.province
+            );
+            cur_frm.refresh_field('full_address');
+        }
+    },
+    province(frm) {
+        if(cur_frm.doc.citys && cur_frm.doc.areas && cur_frm.doc.custom_address_line){
+            cur_frm.set_value("full_address",
+            cur_frm.doc.custom_address_line+', '
+            +cur_frm.doc.areas+', '
+            +cur_frm.doc.citys+', '
+            +cur_frm.doc.province
+            );
+            cur_frm.refresh_field('full_address');
+        }
+        
+    },
+    citys(frm) {
+        if(cur_frm.doc.province && cur_frm.doc.areas && cur_frm.doc.custom_address_line){
+            cur_frm.set_value("full_address",
+            cur_frm.doc.custom_address_line+', '
+            +cur_frm.doc.areas+', '
+            +cur_frm.doc.citys+', '
+            +cur_frm.doc.province
+            );
+            cur_frm.refresh_field('full_address');            
+            
+        }
+        else{
+            cur_frm.set_value("full_address",
+            cur_frm.doc.custom_address_line+', '
+            +cur_frm.doc.areas+', '
+            +cur_frm.doc.citys+', '
+            +cur_frm.doc.province
+            );
+            cur_frm.refresh_field('full_address');
+        }
+        
+    },
+    areas(frm) {
+        if(cur_frm.doc.province && cur_frm.doc.citys && cur_frm.doc.custom_address_line){
+            cur_frm.set_value("full_address",
+            cur_frm.doc.custom_address_line+', '
+            +cur_frm.doc.areas+', '
+            +cur_frm.doc.citys+', '
+            +cur_frm.doc.province
+            );
+            cur_frm.refresh_field('full_address');
+        }
+    },
+    custom_address_line(frm) {
+        if(cur_frm.doc.province && cur_frm.doc.citys && cur_frm.doc.areas){
+            cur_frm.set_value("full_address",
+            cur_frm.doc.custom_address_line+', '
+            +cur_frm.doc.areas+', '
+            +cur_frm.doc.citys+', '
+            +cur_frm.doc.province
+            );
+            cur_frm.refresh_field('full_address');
         }
     }
     
