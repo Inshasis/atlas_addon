@@ -1,0 +1,38 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-04-14 22:08:56.269503",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "warranty_type",
+  "warranty"
+ ],
+ "fields": [
+  {
+   "fieldname": "warranty_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Warranty Type"
+  },
+  {
+   "fieldname": "warranty",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Warranty"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-04-14 22:13:08.125277",
+ "modified_by": "Administrator",
+ "module": "Atlas Addon",
+ "name": "Warranty",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

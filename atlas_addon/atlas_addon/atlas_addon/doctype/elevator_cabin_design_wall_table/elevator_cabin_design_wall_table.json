@@ -1,0 +1,37 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-04-20 16:51:24.072976",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "wall_side",
+  "steel_code"
+ ],
+ "fields": [
+  {
+   "fieldname": "wall_side",
+   "fieldtype": "Select",
+   "label": "Wall Side",
+   "options": "\nRight\nLeft\nRear\nSide"
+  },
+  {
+   "fieldname": "steel_code",
+   "fieldtype": "Select",
+   "label": "Steel Code"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-04-20 16:55:22.743303",
+ "modified_by": "Administrator",
+ "module": "Atlas Addon",
+ "name": "Elevator Cabin Design Wall Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

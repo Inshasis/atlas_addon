@@ -1,0 +1,37 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-04-20 17:08:53.306259",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "wall_direction",
+  "design_code"
+ ],
+ "fields": [
+  {
+   "fieldname": "wall_direction",
+   "fieldtype": "Select",
+   "label": "Wall Direction",
+   "options": "\nRight\nLeft\nFront\nSide"
+  },
+  {
+   "fieldname": "design_code",
+   "fieldtype": "Data",
+   "label": "Design Code"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-04-28 22:24:44.142306",
+ "modified_by": "Administrator",
+ "module": "Atlas Addon",
+ "name": "Elevator Hand-Rail Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

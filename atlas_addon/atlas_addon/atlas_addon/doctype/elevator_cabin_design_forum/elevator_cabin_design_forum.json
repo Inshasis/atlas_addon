@@ -1,0 +1,72 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-04-20 15:58:19.489187",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "wall_side",
+  "material_type",
+  "steel_type",
+  "steel_color",
+  "note"
+ ],
+ "fields": [
+  {
+   "fieldname": "wall_side",
+   "fieldtype": "Select",
+   "label": "Wall Side",
+   "options": "\nRight\nLeft\nRear\nSide"
+  },
+  {
+   "fieldname": "material_type",
+   "fieldtype": "Select",
+   "label": "Material Type",
+   "options": "\nWood\nSteel"
+  },
+  {
+   "fieldname": "steel_type",
+   "fieldtype": "Select",
+   "label": "Steel Type",
+   "options": "\nHairLine\nMirror"
+  },
+  {
+   "fieldname": "steel_color",
+   "fieldtype": "Select",
+   "label": "Steel Color",
+   "options": "\nRose-Gold\nBlank\nCopper\nGold\nSilver"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Data",
+   "label": "Note"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-04-28 22:13:26.173315",
+ "modified_by": "Administrator",
+ "module": "Atlas Addon",
+ "name": "Elevator Cabin Design Forum",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
